@@ -1,0 +1,18 @@
+.button {
+  background-color: #3b2cb9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2a1f8a;
+}
+
+.button:disabled {
+  opacity: 0.6;
+}

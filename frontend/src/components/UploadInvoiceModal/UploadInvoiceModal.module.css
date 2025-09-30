@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgb(10 14 40 / 55%);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  width: min(560px, 92vw);
+  background: #fff;
+  color: #11172a;
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgb(3 8 45 / 35%);
+  padding: 20px 20px 16px;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.subtitle {
+  margin: 0 0 16px;
+  color: #6a6e83;
+  font-size: 13px;
+}
+
+.dropzone {
+  border: 2px dashed #cfd3e6;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  background: #fafbff;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+
+.dragOver {
+  border-color: #7a71f0;
+  background: #f1f2ff;
+  box-shadow: 0 0 0 4px rgb(122 113 240 / 12%) inset;
+}
+
+.fileInput {
+  display: none;
+}
+
+.chooseBtn {
+  appearance: none;
+  border: none;
+  background: linear-gradient(180deg, #5146d8, #4338ca);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgb(67 56 202 / 25%);
+}
+
+.hint {
+  margin-top: 8px;
+  color: #7b7f98;
+  font-size: 12px;
+}
+
+.error {
+  margin-top: 12px;
+  color: #e54848;
+  font-size: 13px;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancelBtn {
+  appearance: none;
+  border: 1px solid #d7dbec;
+  background: #fff;
+  color: #1a2040;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancelBtn:hover {
+  background: #f7f8fc;
+}

@@ -1,0 +1,68 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  padding: 0 0 2px;
+  cursor: pointer;
+  color: #555;
+  border-bottom: 2px solid #555;
+}
+
+.icon {
+  color: #9aa0a6;
+}
+
+.text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333;
+}
+
+.popup {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 12%);
+  padding: 12px;
+  width: 300px;
+}
+
+.calendar {
+  border: none !important;
+}
+/* stylelint-disable selector-class-pattern */
+:global(.react-datepicker__day--in-range),
+:global(.react-datepicker__day--in-selecting-range) {
+  background: rgb(75 60 240 / 15%) !important;
+  color: #222 !important;
+  border-radius: 50% !important;
+}
+
+:global(.react-datepicker__day--selected),
+:global(.react-datepicker__day--range-start),
+:global(.react-datepicker__day--range-end) {
+  background: #4b3cf0 !important;
+  color: #fff !important;
+  border-radius: 50% !important;
+}
+/* stylelint-enable selector-class-pattern */
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.primary {
+  border-radius: 10px;
+}

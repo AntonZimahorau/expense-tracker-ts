@@ -1,0 +1,10 @@
+.tableContainer {
+  padding: 1rem;
+  padding-top: 120px;
+  border-radius: 12px;
+  background: white;
+  font-family: sans-serif;
+  overflow: auto visible;
+  min-height: 100vh;
+  box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+}

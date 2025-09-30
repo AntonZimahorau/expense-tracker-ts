@@ -1,0 +1,11 @@
+.bare {
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 90%;
+}
+
+.input {
+  composes: bare;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}

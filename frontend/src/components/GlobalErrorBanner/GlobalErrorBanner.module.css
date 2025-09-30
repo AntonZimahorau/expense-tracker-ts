@@ -1,0 +1,52 @@
+.wrapper {
+  position: fixed;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0 12px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.banner {
+  margin: 0 auto;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fde8e8;
+  color: #7a1b1b;
+  border: 1px solid #f5c2c2;
+  box-shadow: 0 6px 20px rgb(122 27 27 / 15%);
+  border-radius: 10px;
+  padding: 12px 14px;
+  pointer-events: auto;
+  backdrop-filter: saturate(1.1);
+}
+
+.text {
+  flex: 1;
+  font:
+    500 14px/1.4 system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+
+.close {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.close:hover {
+  background: rgb(122 27 27 / 8%);
+}

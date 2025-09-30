@@ -1,0 +1,28 @@
+.iconList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.iconButton:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background: #e9e7ff; /* light brand tint */
+  border-color: #4b3cf0;
+  box-shadow: 0 0 0 2px rgb(75 60 240 / 20%) inset;
+}
+
+.iconButton svg {
+  display: block;
+}

@@ -1,0 +1,88 @@
+.sidebar {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 340px;
+  height: calc(100vh - 130px);
+  background-color: white;
+  padding: 24px;
+  box-shadow: -2px 0 10px rgb(0 0 0 / 10%);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.uploadBtn {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.buttonGroup {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+}
+
+.cancelButton {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.createButton {
+  flex: 1;
+  margin-left: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 97%;
+}
+
+.amountField {
+  border: none;
+  border-right: 1px solid #ddd;
+}
+
+.currencySelector {
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.errorBox {
+  margin-top: 1rem;
+  padding: 10px 12px;
+  background: #fdecea;
+  color: #b00020;
+  border: 1px solid #f5c2c7;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
