@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { bootstrapAuth, loginUser, logoutUser } from '../utils/auth';
 import {
@@ -28,15 +29,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
-    const token = await loginUser(email, password);
-    setAccessToken(token);
-    setAuthed(true);
+    try {
+      const token = await loginUser(email, password);
+      setAccessToken(token);
+      setAuthed(true);
+    } catch (e) {
+      Sentry.captureException(e);
+      throw e;
+    }
   };
 
   const logout = async () => {
     try {
       await logoutUser();
-    } catch {}
+    } catch (e) {
+      Sentry.captureException(e);
+    }
     clearAccessToken();
     setAuthed(false);
   };

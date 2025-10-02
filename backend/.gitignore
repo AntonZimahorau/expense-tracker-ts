@@ -1,12 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
-.env
-.eslintcache
-help.txt
+*pycache*
+.venv
 
 # testing
 /coverage
@@ -15,9 +11,4 @@ help.txt
 /build
 
 # misc
-.DS_Store
 .env
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*

@@ -1,4 +1,5 @@
 import './sentry/sentry';
+import * as Sentry from '@sentry/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -12,11 +13,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <AuthProvider>
-      <GlobalErrorBannerProvider>
-        <App />
-      </GlobalErrorBannerProvider>
-    </AuthProvider>
+    <Sentry.ErrorBoundary fallback={<p>Something went wrong.</p>}>
+      <AuthProvider>
+        <GlobalErrorBannerProvider>
+          <App />
+        </GlobalErrorBannerProvider>
+      </AuthProvider>
+    </Sentry.ErrorBoundary>
   </React.StrictMode>,
 );
 

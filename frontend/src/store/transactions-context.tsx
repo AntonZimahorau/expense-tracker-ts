@@ -1,3 +1,4 @@
+import * as Sentry from '@sentry/react';
 import { createContext, useState, useEffect, useCallback } from 'react';
 import { Transaction, DateRangeValue, NewTransaction } from '../utils/utils';
 import {
@@ -87,6 +88,7 @@ const TransactionProvider = ({ children }: { children: React.ReactNode }) => {
         prevTransactions.filter((tx) => tx.id !== transactionId),
       );
     } catch (e) {
+      Sentry.captureException(e);
       showError('Unable to delete transaction');
     }
   }
@@ -102,6 +104,7 @@ const TransactionProvider = ({ children }: { children: React.ReactNode }) => {
       const data = await fetchTransactions(dateRange);
       setTransactions(data);
     } catch (e) {
+      Sentry.captureException(e);
       const msg = 'Unable to fetch transactions';
       showError(msg);
     } finally {
@@ -118,6 +121,7 @@ const TransactionProvider = ({ children }: { children: React.ReactNode }) => {
       handleCloseSideBar();
       refreshTransactions();
     } catch (e) {
+      Sentry.captureException(e);
       showError('Unable to update transaction');
     }
   }
@@ -128,6 +132,7 @@ const TransactionProvider = ({ children }: { children: React.ReactNode }) => {
       handleCloseSideBar();
       refreshTransactions();
     } catch (e) {
+      Sentry.captureException(e);
       showError('Unable to create transaction');
     }
   }
